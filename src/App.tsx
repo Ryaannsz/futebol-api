@@ -26,11 +26,11 @@ function App() {
                 key={league.id}
                 className="group relative bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-out hover:-translate-y-2 overflow-hidden border border-white/30"
               >
-                {/* Efeito de brilho ajustado */}
+                
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-15 transition-opacity duration-300 bg-gradient-to-r from-blue-400/30 to-purple-400/30" />
 
                 <div className="relative z-10">
-                  {/* Container do logo ajustado */}
+                  
                   <div className="w-24 h-24 mx-auto mb-4 p-2 bg-gray-100/80 rounded-full shadow-sm border border-gray-200/50">
                     <img
                       src={league.image_path}
@@ -43,7 +43,7 @@ function App() {
                   <h3 className="text-xl font-bold bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent">
                     {league.name}
                   </h3>
-                  <div className="space-y-1 mt-3 text-gray-700"> {/* Texto mais escuro */}
+                  <div className="space-y-1 mt-3 text-gray-700"> 
                     <p className="text-sm">
                       <span className="font-medium text-gray-900">Código:</span> {league.short_code}
                     </p>
