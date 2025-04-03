@@ -11,15 +11,15 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      {/* Cabeçalho */}
+
       <Header />
 
-      {/* Conteúdo Principal */}
+
       <main className="flex-1 container mx-auto px-4 py-12">
         <div className="max-w-2xl mx-auto text-center">
-          {/* ... (textos animados permanecem iguais) */}
+       
 
-          {/* Lista de Ligas Ajustada */}
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {leagues.map((league: any) => (
               <div
@@ -39,7 +39,7 @@ function App() {
                     />
                   </div>
 
-                  {/* Textos com melhor contraste */}
+     
                   <h3 className="text-xl font-bold bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent">
                     {league.name}
                   </h3>
@@ -62,7 +62,7 @@ function App() {
         </div>
       </main>
 
-      {/* Rodapé */}
+      
       <Footer />
     </div>
   );
