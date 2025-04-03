@@ -4,11 +4,12 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { usePlayerDetailsData } from '../hooks/usePlayerDetails';
+import DetailItem from '../components/DetailItem';
 
 
 
 function PlayerDetails() {
-    
+
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
@@ -44,7 +45,7 @@ function PlayerDetails() {
 
           <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Seção de Imagem */}
+         
               <div className="md:col-span-1 flex flex-col items-center">
                 <img
                   src={player.image_path}
@@ -58,7 +59,7 @@ function PlayerDetails() {
                 <p className="text-gray-600">{player.name}</p>
               </div>
 
-              {/* Informações Principais */}
+           
               <div className="md:col-span-2">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <DetailItem label="Data de Nascimento" value={new Date(player.date_of_birth).toLocaleDateString()} />
@@ -69,7 +70,7 @@ function PlayerDetails() {
                   <DetailItem label="Posição" value={player.position_id} />
                 </div>
 
-                {/* Informações Adicionais */}
+    
                 <div className="mt-8 space-y-2">
                   <h3 className="text-lg font-semibold text-gray-800 mb-2">Detalhes Adicionais</h3>
                   <DetailItem label="ID do Esporte" value={player.sport_id} />
@@ -87,12 +88,7 @@ function PlayerDetails() {
   );
 }
 
-// Componente auxiliar para exibir itens de detalhe
-const DetailItem = ({ label, value }: { label: string; value: string | number }) => (
-  <div className="bg-gray-50 p-4 rounded-lg">
-    <p className="text-sm text-gray-600 font-medium">{label}</p>
-    <p className="text-gray-800">{value || '--'}</p>
-  </div>
-);
+
+
 
 export default PlayerDetails;
