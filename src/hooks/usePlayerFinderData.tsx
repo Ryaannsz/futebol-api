@@ -21,6 +21,7 @@ export function usePlayerFinderData(nomePlayer: string){
     })
     return {
         ...query,
-        data: query.data?.data.data
+        data: query.data?.data
+
     }
 }
